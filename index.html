@@ -21,50 +21,67 @@
 <header><div>
   <h1>Privacy Policy – Little Order</h1>
   <p>Android app (com.daynest.daynest)</p>
-  <p class="muted" style="color:#fff">Last updated: 1 November 2026</p>
+  <p class="muted" style="color:#fff">Last updated: 1 November 2026 (version 3.0)</p>
 </div></header>
 <main>
 <section><h2>Summary</h2>
-<p>Little Order keeps your notes, to-dos, meetings and reminders on your own phone, encrypted. We do not run any server, we do not collect your data, and we never share or sell it. The only time anything leaves your phone is when you choose to use an optional feature described below.</p></section>
+<p>Little Order keeps your notes, to-dos, meetings and reminders on your own phone, encrypted. We do not run any server, we do not collect your data, and we never share or sell it. Your content only leaves your phone when you choose an optional feature that needs it, such as the Gemini cloud AI option or calendar sync, as explained below.</p></section>
 
 <section><h2>Who we are</h2>
-<p>Little Order is developed by Mauro Todini, Australia ("we", "us"). This policy applies only to the Little Order app.</p></section>
+<p>Little Order is developed by Mauro Todini, Australia ("we", "us"). This policy applies only to the Little Order app (version 3.0 and later).</p></section>
 
 <section><h2>Information stored on your phone</h2>
 <ul>
 <li>Your notes, to-dos, meetings, reminders, completed items and settings are saved only on your device.</li>
 <li>This data is encrypted with AES-256 using a key kept in the Android Keystore of your phone.</li>
-<li>Android cloud backup of the app is turned off, so your data is not copied to Google Drive by the app.</li>
+<li>Android cloud backup of the app is turned off, so the app does not copy your data to Google Drive.</li>
 </ul>
-<p>The app does not ask for your name, email, phone number, location, contacts, photos or any account login.</p></section>
+<p>The app does not ask for your name, email, phone number, location, photos or any account login.</p></section>
 
 <section><h2>PIN and fingerprint</h2>
 <p>The optional app PIN is stored only on your phone as a salted, one-way hash. Fingerprint or face unlock is handled by Android itself; the app never receives or stores your biometric data.</p></section>
 
-<section><h2>Optional features that use your data</h2>
+<section><h2>AI assistant: three options</h2>
+<p>The AI assistant is optional. Nothing is sent to any AI service until you choose one of these options in Settings and press an AI button (for example Summarise, Tidy up, Make To-do list, Plan my day, Improve or Translate a message).</p>
 <ul>
-<li><b>AI assistant (Google Gemini) – off unless you add your own key.</b> If you paste your own Gemini API key in Settings and use an AI action (for example summarise, tidy up, or turn a note into to-dos), the text of that note or entry is sent directly from your phone to Google's Gemini service to create the answer. It is not sent to us. Google handles it under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a>. Your API key is stored only on your phone, and you can remove it in Settings at any time.</li>
+<li><b>1. Phone AI (Gemini Nano).</b> On phones that support it, the AI runs on your phone through Google's Android AICore service. The text you ask about is processed on the device and is not sent to us or to an AI server. The model is downloaded and updated by Android, not by Little Order. To check whether your phone supports this feature, the app uses Google's ML Kit library (see "Google ML Kit diagnostics" below).</li>
+<li><b>2. Offline AI (download once).</b> You can download an open AI model file (Gemma 4 E2B or Qwen3 0.6B, Apache 2.0 licence) from Hugging Face (huggingface.co). The download is a normal file request, so Hugging Face and its content network can see your IP address and the file requested, as with any website; see the <a href="https://huggingface.co/privacy">Hugging Face Privacy Policy</a>. No account is needed and none of your notes are sent. After the download the AI runs entirely on your phone with Google's LiteRT-LM engine, also with no internet. The model is stored in the app's own storage and you can delete it in Settings at any time.</li>
+<li><b>3. Gemini cloud (your own free key).</b> If you paste your own Gemini API key in Settings, the text of the note, entry or message you use with an AI button is sent directly from your phone to Google's Gemini service to create the answer. It is not sent to us. Google handles it under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a>; with free keys, Google may use the content to improve its services. Your API key is stored encrypted on your phone, and you can remove it in Settings at any time.</li>
+</ul>
+<p>AI answers can be wrong. Please check them before you rely on them.</p></section>
+
+<section><h2>Google ML Kit diagnostics</h2>
+<p>The phone AI option uses Google's ML Kit (GenAI Prompt API). According to <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google's ML Kit data disclosure</a>, ML Kit collects limited technical information for diagnostics and usage analytics: device model, manufacturer and Android version, the app's package name and version, per-installation identifiers, performance and error information, input and output size (not the text itself) and configured languages. Google sends this information over an encrypted connection (HTTPS) and does not share it with third parties. We do not receive this information. It never includes the content of your notes, to-dos, meetings or reminders.</p></section>
+
+<section><h2>Other optional features</h2>
+<ul>
 <li><b>Calendar – off unless you turn it on.</b> If you connect a calendar, the app asks for calendar permission. It reads the list of calendars on your phone so you can choose one, and adds or updates events for your Little Order entries in that calendar. If that calendar belongs to your Google account, Google Calendar may sync those events under your account. The app does not read your other calendar events for any other purpose.</li>
+<li><b>Participants from contacts.</b> When you add a meeting participant, Android's contact picker opens and only the contact you pick (name and phone number or email) is given to the app and saved, encrypted, with that meeting. The app has no permission to read your contact list.</li>
+<li><b>Sending invitations.</b> Invitations and reminders to participants are sent with the SMS, email or messaging app you choose, as normal messages from you.</li>
+<li><b>Voice typing (Speak).</b> The Speak button uses your phone's speech recognition service (often Google). Your voice is handled by that service under its own privacy policy; the app only receives the typed text. The app does not record audio itself.</li>
 <li><b>Backups.</b> When you export a backup, it is protected with a password you choose and saved only where you pick (for example your Downloads folder). We never receive it.</li>
 <li><b>Print / Save as PDF.</b> Printing uses the standard Android print service and goes only to the printer or file you choose.</li>
 </ul></section>
 
 <section><h2>Notifications and alarms</h2>
-<p>The app uses notification, exact alarm, boot and battery permissions only so your meeting and reminder alerts appear on time, including after your phone restarts. This happens entirely on your phone.</p></section>
+<p>The app uses notification, exact alarm, boot and battery permissions only so your meeting and reminder alerts appear on time, including after your phone restarts. This happens entirely on your phone. Notifications do not show your entry titles on the lock screen.</p></section>
+
+<section><h2>Internet access</h2>
+<p>The app uses the internet only for: the Gemini cloud AI option, downloading an offline AI model, the phone AI checks and ML Kit diagnostics described above, and opening web pages you choose (such as this policy or the Gemini key page). All other features work offline.</p></section>
 
 <section><h2>What we do not do</h2>
 <ul>
 <li>We do not send your data to us or to any server of ours.</li>
-<li>We do not share or sell data to third parties.</li>
-<li>The app has no advertising, analytics, tracking or crash-reporting libraries.</li>
-<li>The app does not use location, camera, microphone or contacts.</li>
+<li>We do not share or sell your data to third parties.</li>
+<li>The app has no advertising, no tracking and no analytics of our own. The only diagnostics are Google's ML Kit diagnostics described above.</li>
+<li>The app does not use your location or camera.</li>
 </ul></section>
 
 <section><h2>Google Play</h2>
-<p>When you download the app, Google Play may collect information as described in Google's privacy policy. We do not receive personal information from this, apart from anonymous, combined statistics that Google Play Console provides to all developers (such as install numbers).</p></section>
+<p>When you download the app, Google Play may collect information as described in Google's privacy policy. We do not receive personal information from this, apart from anonymous, combined statistics that Google Play Console provides to all developers (such as install numbers and crash counts).</p></section>
 
 <section><h2>Deleting your data</h2>
-<p>Because your data stays on your device, you control it fully. You can delete single entries in the app, or remove everything by clearing the app's storage in your phone settings or uninstalling the app. Events already added to your calendar can be deleted in your calendar app. You can remove your Gemini key in Settings at any time.</p></section>
+<p>Because your data stays on your device, you control it fully. You can delete single entries in the app, delete a downloaded offline AI model and remove your Gemini key in Settings, or remove everything by clearing the app's storage in your phone settings or uninstalling the app. Events already added to your calendar can be deleted in your calendar app. Text you sent with the Gemini cloud option is handled by Google under its terms.</p></section>
 
 <section><h2>Children</h2>
 <p>The app is not directed at children under 13 and does not knowingly collect any information from anyone, including children.</p></section>
