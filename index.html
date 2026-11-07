@@ -21,7 +21,7 @@
 <header><div>
   <h1>Privacy Policy – Little Order</h1>
   <p>Little Order for Android</p>
-  <p class="muted" style="color:#fff">Last updated: 3 November 2026 (version 3.2.1)</p>
+  <p class="muted" style="color:#fff">Last updated: 7 November 2026 (version 3.2.4)</p>
 </div></header>
 <main>
 <section><h2>Summary</h2>
@@ -39,7 +39,7 @@
 <p>No Little Order account is required. If you choose Google Drive sync, Google asks you to authorise access to Little Order’s hidden app folder. The app may retrieve and display the connected Google account’s email address on your phone to help identify the account. That address is not sent to us. Names, phone numbers or email addresses you enter yourself or select for meeting participants are stored with those entries and are included in the encrypted copy if you enable sync.</p></section>
 
 <section><h2>PIN and fingerprint</h2>
-<p>The optional app PIN is stored only on your phone as a salted, one-way hash. Fingerprint or face unlock is handled by Android itself; the app never receives or stores your biometric data.</p></section>
+<p>The optional app PIN is stored only on your phone as a salted, one-way hash. After 5 wrong tries the app waits one minute before you can try again. Fingerprint or face unlock is handled by Android itself; the app never receives or stores your biometric data.</p></section>
 
 <section><h2>AI assistant: three options</h2>
 <p>The AI assistant is optional. Nothing is sent to any AI service until you choose one of these options in Settings and press an AI button (for example Summarise, Tidy up, Make To-do list, Plan my day, Improve or Translate a message).</p>
@@ -51,10 +51,10 @@
 <p>AI answers can be wrong. Please check them before you rely on them.</p></section>
 
 <section><h2>Sync between devices (optional; free trial and full version)</h2>
-<p>Sync is off unless you turn it on. No Little Order account is needed and we do not run a sync server. When sync is on, the app makes one copy of your To-dos, Reminders, Notes and Meetings, encrypts it <b>on your phone</b> with a sync password you choose (AES-256-GCM, key made from your password with PBKDF2), and saves only that encrypted copy in a place you control. Your sync password never leaves your phone, so we, Google and your cloud service cannot read the copy. Settings, your PIN, drafts and purchase status are not synced. The encrypted copy also contains the date your free trial started, so all your synced phones use the same trial dates.</p>
+<p>Sync is off unless you turn it on. No Little Order account is needed and we do not run a sync server. When sync is on, the app makes one copy of your To-dos, Reminders, Notes and Meetings, encrypts it <b>on your phone</b> with a sync password you choose (AES-256-GCM, key made from your password with PBKDF2), and saves only that encrypted copy in a place you control. Your sync password never leaves your phone, so we, Google and your cloud service cannot read the copy. So you do not have to type it again, the password is remembered on each phone in encrypted form, together with the other sync settings; these settings are never uploaded. Settings, your PIN, drafts and purchase status are not synced. The encrypted copy also contains the date your free trial started, so all your synced phones use the same trial dates.</p>
 <ul>
-<li><b>Sync with Google Drive.</b> You sign in with your Google account and allow access. The app asks only for the <code>drive.appdata</code> permission: a hidden app folder in your own Google Drive that only Little Order can use. The app cannot see, open or change any of your other Drive files. The encrypted copy is sent directly from your phone to Google Drive over HTTPS and stored under your Google account and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The app shows the email address of the connected account on your phone only; it is not sent to us.</li>
-<li><b>Sync with a file.</b> For people without a Google account, you can pick a file yourself (for example in OneDrive, Dropbox, Nextcloud or a folder kept in sync by another app). The app reads and writes only that one file, through Android's file picker. The file is handled by the service you chose under its own terms.</li>
+<li><b>Sync with Google Drive (“Keep my phones in sync”).</b> You press one button, sign in with your Google account and allow access. If Google later asks you to sign in again, the app shows “Connect Google again”; your entries and sync password stay on your phone. The app asks only for the <code>drive.appdata</code> permission: a hidden app folder in your own Google Drive that only Little Order can use. The app cannot see, open or change any of your other Drive files. The encrypted copy is sent directly from your phone to Google Drive over HTTPS and stored under your Google account and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The app shows the email address of the connected account on your phone only; it is not sent to us.</li>
+<li><b>Sync with a file (under “More options”).</b> For people without a Google account, you can pick a file yourself (for example in OneDrive, Dropbox, Nextcloud or a folder kept in sync by another app). The app reads and writes only that one file, through Android's file picker. The file is handled by the service you chose under its own terms.</li>
 </ul>
 <p>Little Order's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. The data is used only to keep your own entries the same on your devices. It is not used for advertising, not sold, not shared with anyone, and not read by people.</p>
 <p>You can stop sync at any time in Settings &gt; Sync between devices (this also removes the app's access to Google Drive), and you can delete the synced copy from there. You can also remove the app's access in your <a href="https://myaccount.google.com/permissions">Google account settings</a>.</p></section>
@@ -64,7 +64,7 @@
 
 <section><h2>Other optional features</h2>
 <ul>
-<li><b>Calendar – off unless you turn it on.</b> If you connect a calendar, the app asks for calendar permission. It reads the list of calendars on your phone so you can choose one, and adds or updates events for your Little Order entries in that calendar. If that calendar belongs to your Google account, Google Calendar may sync those events under your account. The app does not read your other calendar events for any other purpose.</li>
+<li><b>Calendar – off unless you turn it on.</b> If you connect a calendar, the app asks for calendar permission. It reads the list of calendars on your phone so you can choose one, and adds or updates events for your Little Order meetings and reminders in that calendar. Each of these events has a short reference in its description so the app can recognise it. If you change to a different calendar, the app removes the events it created from the old calendar and adds them to the new one, so they are not doubled; it looks only for events with its own reference and does not change or delete your other events. If that calendar belongs to your Google account, Google Calendar may sync those events under your account. The app does not read your other calendar events for any other purpose.</li>
 <li><b>Participants from contacts.</b> When you add a meeting participant, Android's contact picker opens and only the contact you pick (name and phone number or email) is given to the app and saved, encrypted, with that meeting. The app has no permission to read your contact list.</li>
 <li><b>Sending invitations.</b> Invitations and reminders to participants are sent with the SMS, email or messaging app you choose, as normal messages from you.</li>
 <li><b>Voice typing (Speak).</b> The Speak button uses your phone's speech recognition service (often Google). Your voice is handled by that service under its own privacy policy; the app only receives the typed text. The app does not record audio itself.</li>
